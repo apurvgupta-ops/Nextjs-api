@@ -4,9 +4,9 @@ import { MDBBtn } from "mdb-react-ui-kit";
 const Navbar = () => {
   return (
     <>
-      <nav className="Navbar container">
+      <nav className="Navbar container ">
         <Link href="/">
-          <a className="Navbar-brand">SuperHero-Identity</a>
+          <a className="Navbar-brand p-5">SuperHero-Identity</a>
         </Link>
         <Link href="/new">
           <MDBBtn>New-Identity</MDBBtn>
