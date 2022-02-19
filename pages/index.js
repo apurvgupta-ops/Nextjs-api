@@ -14,16 +14,23 @@ const index = ({ heros }) => {
       <div className="container">
         <h5 className="py-2">SuperHero Identity</h5>
         <div>
-          {heros.map((hero) => {
+          {heros.map((hero, index) => {
             return (
-              <MDBCard className="my-2" style={{ maxWidth: "22rem" }}>
+              <MDBCard
+                className="my-2"
+                style={{ maxWidth: "22rem" }}
+                key={index}
+              >
                 <MDBCardBody>
                   <MDBCardTitle>
                     {hero.superHero} - {hero.realName}
                   </MDBCardTitle>
                   <MDBCardText>Reveal Identity</MDBCardText>
                   <Link href={"/"}>
-                    <MDBBtn>View</MDBBtn>
+                    <MDBBtn className="mx-2">View</MDBBtn>
+                  </Link>
+                  <Link href={"/"}>
+                    <MDBBtn>Edit</MDBBtn>
                   </Link>
                 </MDBCardBody>
               </MDBCard>
