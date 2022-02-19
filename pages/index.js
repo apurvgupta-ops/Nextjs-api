@@ -26,7 +26,7 @@ const index = ({ heros }) => {
                     {hero.superHero} - {hero.realName}
                   </MDBCardTitle>
                   <MDBCardText>Reveal Identity</MDBCardText>
-                  <Link href={"/"}>
+                  <Link href={`/${hero._id}`}>
                     <MDBBtn className="mx-2">View</MDBBtn>
                   </Link>
                   <Link href={"/"}>
@@ -42,7 +42,7 @@ const index = ({ heros }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const response = await axios.get("http://localhost:3000/api/hero");
   // console.log(response.data.hero);
   const { hero } = response.data;
